@@ -7,7 +7,7 @@ client = Client(api_key, api_secret)
 exchange_info = client.get_exchange_info()
 count = 0
 for s in exchange_info['symbols']:
-    if s['symbol'].endswith('USDT'):
+    if s['symbol'].endswith('USDT'): # add BTC for getting Btc pairs
         print(s['symbol']+',\n')
         count += 1
 print(count)
